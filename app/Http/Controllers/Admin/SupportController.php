@@ -41,9 +41,13 @@ class SupportController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string|int $id)
     {
-        //
+        if(!$support = Support::find($id)){
+            return back();
+        }
+
+        return view('admin.supports.show', compact('support'));
     }
 
     /**
