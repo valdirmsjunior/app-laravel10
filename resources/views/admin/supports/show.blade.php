@@ -4,5 +4,11 @@
     <li>Assunto: {{ $support->subject }}</li>
     <li>Status: {{ $support->status }} </li>
     <li>Descrição: {{ $support->body }} </li>
-    <li></li>
+
 </ul>
+
+<form action="{{ route('support.delete', $support->id) }}" method="post">
+    @csrf
+    @method('DELETE')
+    <button type="submit">Deletar</button>
+</form>

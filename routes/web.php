@@ -22,3 +22,6 @@ Route::get('/supports', [SupportController::class, 'index'])->name('support.inde
 Route::get('/supports/create', [SupportController::class, 'create'])->name('support.create');
 Route::post('/supports', [SupportController::class, 'store'])->name('support.store');
 Route::get('/supports/{id}', [SupportController::class, 'show'])->name('support.show');
+Route::get('/supports/{id}/edit', [SupportController::class, 'edit'])->name('support.edit');
+Route::put('/supports/{id}', [SupportController::class, 'update'])->name('support.update');
+Route::delete('/supports/{id}', [SupportController::class, 'destroy'])->name('support.delete');
