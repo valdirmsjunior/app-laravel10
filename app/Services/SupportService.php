@@ -9,9 +9,7 @@ use stdClass;
 
 class SupportService
 {
-    protected $repository;
-
-    public function __construct(SupportRepositoryInterface $repository)
+    public function __construct(protected SupportRepositoryInterface $repository)
     {
 
     }
